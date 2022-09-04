@@ -8,7 +8,7 @@ const connection=mysql.createConnection({
     password:config.password
 });
 const getConnection =() =>{
-    return connection ;
+    return connection;
 };
 module.exports={
     getConnection

@@ -3,7 +3,9 @@ import {getConnection} from "./../bd/databaseconfig";
 const getProducts= async(request,response)=>{
     try{
         const connection = await getConnection();
-        const result=await connection.query("SELECT * FROM product") ;
+        const result=await connection.query({
+            sql:"SELECT * FROM product"
+        }) ;
         console.log(result);
         response.json(result);
     }catch(error){
@@ -15,7 +17,9 @@ const getProducts= async(request,response)=>{
 const getCategories= async(request,response)=>{
     try{
         const connection = await getConnection();
-        const result=await connection.query("SELECT * FROM category") ;
+        const result=await connection.query({
+            sql:"SELECT * FROM category"
+        }) ;
         console.log(result);
         response.json(result);
     }catch(error){
