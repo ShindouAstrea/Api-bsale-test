@@ -15,6 +15,6 @@ app.set("port", 3000);
 app.use(morgan("dev"));
 // "call for methods , if user make request to the specified endpoint"
 app.use("/api/v1/products",routes) ;
-app.use("/api/v1/category",routes2) ;
+app.use("/api/v1/categories",routes2) ;
 
 export default app ;
