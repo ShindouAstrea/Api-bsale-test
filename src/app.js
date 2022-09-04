@@ -8,7 +8,8 @@ import morgan from "morgan";
 //Creation  server
 const app = express();
 //config
-app.set("port", 3000);
+const PORT = process.env.PORT || 3000;
+app.set("port", PORT);
 
  //Middleware
  // This method use morgan and with the parameter "dev", morgan tell us how detail should show the server
